@@ -1,0 +1,223 @@
+/* CSS Reset */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: unset;
+    font-family: 'digital', sans-serif;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+img,
+picture,
+svg,
+canvas {
+    display: block;
+    max-inline-size: 100%;
+    block-size: auto;
+}
+
+/* Styling */
+
+@font-face {
+    font-family: 'digital';
+    src: url(./fonts/digital.ttf);
+}
+
+.app-container {
+
+    height: auto;
+    width: auto;
+
+    display: grid;
+    grid-template-rows: 1fr 6fr;
+}
+
+.header {
+
+    margin-top: 3rem;
+
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    position: sticky;
+    top: 0;
+
+    background: white;
+
+    z-index: 3;
+}
+
+.header > * {
+    margin-bottom: 1rem;
+}
+
+.title {
+    font-size: 4rem;
+}
+
+.form-container {
+    width: min(500px, 70%);
+}
+
+ form {
+    display: flex;
+}
+
+label .icon {
+    width: 1.5rem;
+    margin-right: 0.5rem;
+    position: relative;
+    top: 0.7rem;
+}
+
+.form-container input {
+    flex-grow: 1;
+    height: 2.5rem;
+    font-size: 1.5rem;
+}
+
+button.new-entry {
+    padding: 0.2rem 0.4rem;
+    width: 150px;
+    font-size: 1.2rem;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+span.plus {
+    font-size: 2rem;
+    margin-right: 10px;
+}
+
+
+dialog {
+    width: max(450px, 30%);
+    height: 50%;
+    padding: 2.2rem;
+ 
+}
+
+dialog::backdrop {
+    background: linear-gradient(45deg, red, blue);
+    opacity: 0.4;
+}
+
+dialog form {
+    font-size: 1.5rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+dialog section {
+    margin-bottom: 1rem;
+}
+
+dialog input[type="text"] {
+    margin-left: 0.5rem;
+    width: 80%;
+}
+
+dialog input[type="checkbox"] {
+    transform: scale(1.5);
+}
+
+dialog #pages {
+    max-width: 5ch;
+}
+
+dialog button {
+    margin: 0.5rem;
+    padding: 0.2rem 0.4rem;
+    width: 40%;
+    align-self: center;
+}
+
+
+
+.library-body {
+
+    width: 100%;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 300px));
+    gap: 1.5rem;
+    justify-content: center;
+    align-content: start;
+}
+
+#book-container {
+    box-shadow: 0 0.1rem 0.2rem black;
+    aspect-ratio: 2 / 3;
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+}
+
+.book-title {
+    font-size: 4rem;
+    line-height: 4rem;
+
+}
+
+.author {
+
+    font-size: 2rem;
+    align-self: start;
+
+}
+
+#tool-bar {
+    position: absolute;
+    bottom: 2rem;
+    
+    display: flex;
+    gap: 2rem;
+}
+
+#tool-bar > div {
+    display: flex;
+    font-size: 1.5rem;
+}
+
+#tool-bar > div > .icon {
+    margin-left: 0.5rem;
+    width: 2rem;
+    cursor: pointer;
+}
+
+#tool-bar > div > #check *{
+    pointer-events: none;
+}
+
+
+
+#tool-bar > div > .icon:hover {
+    transform: scale(1.1);
+}
+
+#tool-bar.read #check {
+    fill: green;
+}

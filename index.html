@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Library</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./script.js" defer></script>
+</head>
+<body>
+
+    <div class="app-container">
+
+        <div class="header">
+            <div class="title">Mido Digital Library</div>
+            <div class="form-container">
+                <form action="#">
+                    <label for="search">
+                        <img src="./img/search.svg" alt="search icon" class="icon">
+                    </label>
+                    <input type="search"
+                           id="search"
+                           placeholder = "Search Library">
+                </form>
+            </div>
+            <button type="button" class="new-entry"><span class="plus">+</span>New Book</button>
+        </div>
+
+        <div class="library-body"></div>
+
+    </div>
+    
+    <dialog>
+        <form action="#">
+                <section>
+                    <label for="title">Title</label>
+                    <input type="text"
+                           id="title"
+                           name="title"
+                          >
+                </section>
+
+                <section>
+                    <label for="author">Author</label>
+                    <input type="text"
+                           id="author"
+                           name="author"
+                          >
+                </section>
+
+                <section>
+                    <label for="pages">Number of pages</label>
+                    <input type="number"
+                           id="pages"
+                           name="pages"
+                          >
+                </section>
+
+                <section>
+                    <label for="checkbox">Book finished</label>
+                    <input type="checkbox" id="checkbox" name="finished-book" value="true">
+                </section>
+                
+                <button class="add-book">Add Book</button>
+                <button type="button" class="cancel">Cancel</button>
+        </form>
+    </dialog>
+
+</body>
+</html>
