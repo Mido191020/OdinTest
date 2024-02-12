@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library</title>
+    <link rel="stylesheet" href="styels.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet" />
+    <link rel="shortcut icon" href="favicon.png" />
+    <script src="https://kit.fontawesome.com/4c536a6bd5.js" crossorigin="anonymous"></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="headiteams">
+            <h1>Library</h1>
+            <nav>
+                <div class="active" id="loading"></div>
+                <!-- if user logged in show log out button --> 
+                <div class="logged-out" id="loggedOut">
+                    <button class="registration" id="logintbt">Log in</button>
+                </div>
+                <div class="logged-in" id="loggedIn">
+                    <button class="registration" id="Accountbt">Account</button>
+                    <button class="registration" id="logOutbt">Log out</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main class="main page">
+        <button class="Additeam" id="addBookbt">+ Add Book</button>
+        <div class="Grid" id="BookGrid"></div>
+    </main>
+    <footer class="footer">
+        <p>
+            Mido
+        </p>
+        <a href="https://github.com/Mido191020" target="_blank">
+            <i class="github"></i>
+        </a>
+    </footer>
+    <div class="data" id="addBookdata">
+        <form class="add book" id="addBookForm">
+            <h3>Add New Book</h3>
+            <input class="input" type="text" id="title" placeholder="Title" required maxlength="50">
+            <p class="error-msg" id="errorMsg"></p>
+            <input class="input" type="text" id="Author" placeholder="Author" required maxlength="50">
+            <input class="input" type="number" id="pages" placeholder="pages" required maxlength="10000">
+            <div class="isRead">
+                <label for="isRead">Have you read the book?</label>
+                <input class="checkbox" type="checkbox" id="isReadcheckbox">
+            </div>
+            <button class="btn green" type="submit">submit</button>
+        </form>
+    </div>
+    <div class="modal" id="accountModal"></div>
+    <div class="overlay" id="overlay"></div>
+</body>
+</html>
